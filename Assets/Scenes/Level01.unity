@@ -375,6 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1b831bb34c1db44b61c8500836a4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 0.53
   walkableLayer:
     serializedVersion: 2
@@ -798,11 +799,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d6f785603f69b4d8d2cecf2ec0f44d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 1.62
   defenseStats:
     maxHealth: 100
     armor: 1
   currentHealth: 0
+  damageTransform: {fileID: 0}
 --- !u!114 &1039147482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,6 +971,18 @@ MonoBehaviour:
     audio: {fileID: 8300000, guid: d6c91dab11efc54479b5f917014c1b6b, type: 3}
   - name: level-complete
     audio: {fileID: 8300000, guid: e08c695d3a29df449967175f4eb929c3, type: 3}
+  - name: splash-death1
+    audio: {fileID: 8300000, guid: 00f07ed07b8b18549b2c803d14b316e5, type: 3}
+  - name: splash-death2
+    audio: {fileID: 8300000, guid: 22431033fd25cd649baeb26bb6614802, type: 3}
+  - name: splash-hit1
+    audio: {fileID: 8300000, guid: 1f07e1dc3fa13fa42b751608f3d1cd90, type: 3}
+  - name: splash-hit2
+    audio: {fileID: 8300000, guid: 3ef24373918168a46ac86bd968e866aa, type: 3}
+  - name: splash-strike1
+    audio: {fileID: 8300000, guid: 82ea28ffcb30c4f4ba686e73b7d02ebe, type: 3}
+  - name: splash-strike2
+    audio: {fileID: 8300000, guid: e0831b088162de3438f7af3baa1aee72, type: 3}
 --- !u!4 &1374847405
 Transform:
   m_ObjectHideFlags: 0
@@ -1354,11 +1369,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d6f785603f69b4d8d2cecf2ec0f44d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 0.5
   defenseStats:
     maxHealth: 100
     armor: 1
   currentHealth: 0
+  damageTransform: {fileID: 0}
 --- !u!54 &7200807242280016116
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1460,12 +1477,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe56375826772541b36930fef6178bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 0.5
   ofenseStats:
     damage: 10
     attackSpeed: 1
+  attackRange: 4
   enemyLayers:
   - Creep
+  enemiesToAttack: []
 --- !u!65 &7200807242812297700
 BoxCollider:
   m_ObjectHideFlags: 0
