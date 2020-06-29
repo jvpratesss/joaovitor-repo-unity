@@ -19,7 +19,7 @@ namespace NavGame.Core
         {
             if (!isInit)
             {
-                Debug.LogError("ProjectileController Init was not called")
+                Debug.LogError("ProjectileController Init was not called");
                 Destroy(gameObject);
             }
         }
@@ -37,7 +37,7 @@ namespace NavGame.Core
 
         if(distance < tolerance)
         {
-            target.takeDamage(damage);
+            target.TakeDamage(damage);
             Destroy(gameObject);
             if(onAttackStrike != null)
             {
